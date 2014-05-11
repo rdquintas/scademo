@@ -27,11 +27,11 @@
                     <p class="navbar-text navbar-left" style="color: #089FDC">This is a prototype for SCA</p>
                 </strong>
             </div>
-            <div class="navbar-collapse collapse">                
-                <form class="navbar-form navbar-right" role="form">                    
+            <div class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right" role="form">
 
-                    <div class="form-group">                       
-                        <label for="inputPassword3" class="control-label" style="color: #089FDC"> User/Password:&nbsp</label>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label" style="color: #089FDC">User/Password:&nbsp</label>
                         <input id="user" type="text" placeholder="user mame" class="form-control">
                     </div>
                     <div class="form-group">
@@ -53,7 +53,7 @@
                 <div class="col-md-6">
                     <p>This is a prototype for TENA Home Delivery.
                         <br>There are 2 users available to test:
-                        <br>&nbsp&nbsp&nbsp> <b>End User</b>: &nbsp&nbsp&nbsp&nbsp&nbsptest/123123                        
+                        <br>&nbsp&nbsp&nbsp> <b>End User</b>: &nbsp&nbsp&nbsp&nbsp&nbsptest/123123
                         <br>&nbsp&nbsp&nbsp> <b>Admin User</b>: &nbspadmin/123123
                     </p>
                     <p><a id="btn_learnmore" class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
@@ -180,12 +180,13 @@
             event.preventDefault();
             console.log($("#user").val());
             console.log($("#password").val());
-            if ($("#user").val() === "admin" && $("#password").val() === "123123") {
+            var tmpString = $("#user").val().toLowerCase();
+            if (tmpString === "admin" && $("#password").val() === "123123") {
                 window.location.href = "views/admin/main.html"
                 return;
             }
 
-            if ($("#user").val() === "test" && $("#password").val() === "123123") {
+            if (tmpString === "test" && $("#password").val() === "123123") {
                 window.location.href = "views/enduser/main.html"
                 return;
             }
@@ -198,7 +199,7 @@
         });
 
         $("#btn_learnmore").click(function() {
-            $('#learnmore').modal('show');
+            $('#learnmore').mod<al('show');
         });
 
     });
