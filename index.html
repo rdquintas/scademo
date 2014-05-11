@@ -178,9 +178,9 @@
     $(document).ready(function() {
         $("form").on("submit", function(event) {
             event.preventDefault();
-            console.log($("#user").val());
-            console.log($("#password").val());
+  
             var tmpString = $("#user").val().toLowerCase();
+
             if (tmpString === "admin" && $("#password").val() === "123123") {
                 window.location.href = "views/admin/main.html"
                 return;
@@ -199,7 +199,7 @@
         });
 
         $("#btn_learnmore").click(function() {
-            $('#learnmore').mod<al('show');
+            $('#learnmore').modal('show');
         });
 
     });
